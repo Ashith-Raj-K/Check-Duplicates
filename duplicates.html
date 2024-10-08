@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicates</title>
+</head>
+<body>
+    <input id="string" type="text" placeholder="enter the value ">
+    <button onclick="arrDupli()">submit</button>
+    <p id="result"></p>
+    <script>
+    function arrDupli(){
+        let arr = []
+        let string = document.getElementById('string').value.trim()
+        arr = string.split(' ')
+        let uniqueArr = arr.filter((item,index)=>arr.indexOf(item)===index)
+        console.log(uniqueArr)
+        document.getElementById('result').innerHTML = 'The unique array is: ' +uniqueArr
+       
+    }
+    </script>
+    
+</body>
+</html>
